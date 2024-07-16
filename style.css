@@ -1,0 +1,247 @@
+:root {
+	--bg-card-color: #8978f3;
+	--bg-input-color: #f0edffcc;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Poppins", sans-serif;
+}
+
+main {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+}
+
+.right-sec {
+	position: relative;
+  overflow: hidden;
+	width: 50%;
+	height: 100vh;
+	background: linear-gradient(217.64deg, #9181f4 -5.84%, #5038ed 106.73%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.right-sec * {
+	z-index: 2;
+}
+
+.right-sec::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: url("imgs/background.png");
+	opacity: 0.4;
+	z-index: 1;
+}
+
+.right-sec .card {
+	width: 412px;
+	height: 524px;
+	top: 122px;
+	right: 819px;
+	border-radius: 46px;
+	border: 1px solid #fff;
+	background-color: var(--bg-card-color);
+}
+
+.right-sec .card h1 {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 46px;
+	text-align: left;
+	color: white;
+	margin: 35px;
+}
+
+.right-sec .card > img {
+	position: absolute;
+	width: 785px;
+	height: 524px;
+	left: -75px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.right-sec .icon {
+	width: 79px;
+	height: 79px;
+	border-radius: 50%;
+	background-color: white;
+	position: relative;
+	top: 65px;
+	right: calc(79px / 2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.right-sec .icon img {
+	width: 42px;
+	height: 42px;
+}
+
+.left-sec {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.left-sec .container {
+	width: 364px;
+	height: 469px;
+	top: 149px;
+	left: 159px;
+}
+
+.left-sec .container .heading h1 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 45px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.left-sec form {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.left-sec form div {
+	position: relative;
+	display: flex;
+}
+
+.left-sec form div img {
+	position: absolute;
+	height: 24px;
+	top: 50%;
+	margin: 0 20px;
+	transform: translateY(-50%);
+}
+
+.left-sec form div input {
+	width: 100%;
+	height: 52px;
+	top: 228px;
+	left: 159px;
+	border-radius: 16px;
+	padding: 0 50px;
+	border: none;
+	outline: none;
+	background-color: var(--bg-input-color);
+	margin: 10px 0;
+}
+
+.left-sec form div input::placeholder {
+	color: black;
+	font-family: "Poppins", sans-serif;
+}
+
+.left-sec form .btn {
+	width: 124px;
+	height: 52px;
+	border-radius: 16px;
+	background: linear-gradient(217.64deg, #9181f4 -5.84%, #5038ed 106.73%);
+	border: none;
+	color: white;
+	font-family: "Poppins", sans-serif;
+	margin-top: 20px;
+	box-shadow: 0px 8px 21px 0px #00000029;
+	cursor: pointer;
+}
+
+.left-sec > p {
+	font-family: Poppins;
+	font-size: 16px;
+	margin: 0 20px;
+}
+
+span {
+	font-weight: 700;
+}
+
+.left-sec .other-sources {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.left-sec .other-sources div {
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+	cursor: pointer;
+}
+
+.left-sec .other-sources div img {
+	width: 30px;
+	margin: 10px;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 300px) {
+  .right-sec .card {
+    width: 300px;
+    height: 430px;
+    text-align: center;
+  }
+  .right-sec .card > img {
+    display: none;
+  }
+  .right-sec .card h1 {
+    text-align: center;
+  }
+  .right-sec .card .icon {
+    position: static;
+    margin: auto;
+  }
+	.left-sec form div input::placeholder {
+		font-size: 14px;
+	}
+	.left-sec form div input {
+		font-size: 14px;
+	}
+	.left-sec form div button {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 425px) and (min-width: 300px) {
+  main {
+    flex-direction: column;
+  }
+  .left-sec, .right-sec {
+    width: 100%;
+    padding: 40px 0;
+  }
+  .right-sec .card {
+    width: 265px;
+    height: 330px;
+    margin: 40px;
+  }
+  .right-sec .card h1 {
+    font-size: 24px;
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 375px) and (min-width: 300px) {
+  .right-sec .card h1 {
+    font-size: 23px;
+  }
+}
